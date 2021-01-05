@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" /> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="assets/js/sidemenu.js"></script>
+</head>
+
+<body>
+    <div x-data="{ sidebarOpen: false }" class="flex h-screen bg-white">
+
+        <!-- Sidebar Start -->
+        <div :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false" class="fixed z-20 inset-0 bg-black opacity-50 transition-opacity"></div>
+        <div :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'" class="flex flex-col fixed z-30 inset-y-0 left-0 w-64 transition duration-300 transform bg-gray-900 overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
+            <div class="flex items-center justify-center mt-8">
+                <div class="flex items-center">
+                    <img @click="sidebarOpen = false" src="assets/img/radium-dash-logo.png" alt="">
+                </div>
+            </div>
+
+            <nav class="mt-10" x-data="{selected:null}">
+                
+
+                <a class="flex items-center mt-4 py-2 px-6 bg-gray-700 bg-opacity-25 text-gray-100" href="#">
+                    <img src="assets/img/dash/dashboard.png">
+                    <span class="mx-3">Dashboard</span>
+                </a>
+
+                <!-- Project menu starts-->
+                <button 
+                    @click="selected !== 1 ? selected = 1 : selected = null"
+                    class="flex items-center w-full focus:outline-none mt-4 py-2 px-6 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100">
+                    
+                    <img src="assets/img/dash/project.png">
+                    <span class="mx-3">Projects</span>
+                    <i 
+                        class="ml-auto fas "
+                        :class="selected == 1 ? 'fa-caret-up' : 'fa-caret-down'"
+                    ></i>
+
+                </button>
+                <!-- Project menu ends-->
+
+                <!-- Project Submenu starts-->
+                <div 
+                    class="relative overflow-hidden transition-all max-h-0 duration-700 " 
+                    x-ref="projects" 
+                    x-bind:style="selected == 1 ? 'max-height: ' + $refs.projects.scrollHeight + 'px' : ''">
+
+                    <a class="block py-2 pl-16 pr-6 text-white text-sm" href="#">
+                        <span class="mx-3">Add new project</span>
+                    </a>
+                    <a class="block py-2 pl-16 pr-6 text-white text-sm" href="#">
+                        <span class="mx-3">Edit project</span>
+                    </a>
+                    <a class="block py-2 pl-16 pr-6 text-white text-sm" href="#">
+                        <span class="mx-3">Add new instance</span>
+                    </a>
+                    <a class="block py-2 pl-16 pr-6 text-white text-sm" href="#">
+                        <span class="mx-3">Edit instance</span>
+                    </a>
+                </div>
+                <!-- Project Submenu ends-->    
+
+                <a class="flex items-center mt-4 py-2 px-6 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100" href="#">
+                    <img src="assets/img/dash/toolbox.png">
+                    <span class="mx-3">Toolbox</span>
+                </a>
+
+                <a class="flex items-center mt-4 py-2 px-6 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100" href="#">
+                    <img src="assets/img/dash/platforms.png">
+                    <span class="mx-3">Platforms</span>
+                </a>
+
+                <a class="flex items-center mt-4 py-2 px-6 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100" href="#">
+                    <img src="assets/img/dash/support.png">
+                    <span class="mx-3">Support</span>
+                </a>
+            </nav>
+
+            <nav class="mt-auto mb-4">
+                <a class="flex items-center mt-4 py-2 px-6 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100" href="#">
+                    <img src="assets/img/dash/admin.png">
+                    <span class="mx-3">Admin</span>
+                </a>
+                <a class="flex items-center mt-4 py-2 px-6 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100" href="#">
+                    <img src="assets/img/dash/logout.png">
+                    <span class="mx-3">Logout</span>
+                </a>
+            </nav>
+        </div> 
+        <!-- Sidebar Ends -->      
+
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header Start -->
+            <header class="flex justify-between items-center py-4 px-6 bg-white">
+                <div class="flex items-center">
+                    <button @click="sidebarOpen = true" class="text-gray-500 focus:outline-none lg:hidden">
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6H20M4 12H20M4 18H11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="relative mx-4 lg:mx-0">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                            <img src="assets/img/dash/search.png" alt="" srcset="">
+                        </span>
+                        <input class="form-input search w-32 sm:w-64 rounded-md pl-16 pr-4 focus:outline-none text-xl" type="text" placeholder="Search...">
+                    </div>
+                </div>
+                
+                <!-- Notification start-->
+                <div class="flex items-center">
+                    <div class="relative">
+                        <button class="flex mr-8 text-gray-600 focus:outline-none relative">
+                            <img src="assets/img/dash/notification.png" alt="" srcset="">
+                            <span class="notify rounded-full absolute"></span>
+                        </button>
+                    </div>
+                    
+                    <div class="relative">
+                        <button class="relative block h-15 w-15 rounded-full overflow-hidden focus:outline-none flex items-center">
+                            <img class="h-full w-full object-cover mr-3" src="assets/img/dash/avatar.png" alt="Your avatar">
+                            <i class="fas fa-caret-down text-2xl text-gray-200"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Notification end-->
+            </header>
+            <!-- Header Ends -->
+            
+            <!-- Main Start -->
+            <main class="flex-1 overflow-x-hidden overflow-y-auto bg-dash-main">
+                <div class="container mx-auto px-2 md:px-6 py-8">
+                    <h3 class="text-gray-700 text-3xl font-medium mx-4 md:m-0">Dashboard</h3>
+
+                    <!-- Summary table starts -->
+                    <div class="-my-2 mb-4 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+                        <div class="align-middle inline-block min-w-full table-shadow overflow-hidden sm:rounded-lg bg-white p-5 mt-8 mb-4 md:my-8 mx-4 md:mx-0 ">
+                            <div class="flex justify-between items-center mb-4 px-6">
+                                <div class="text-md leading-5 text-gray-500">Summary</div>
+                                <div class="flex items-center">
+                                    <img src="assets/img/dash/filter.png" class="mr-3">
+                                    <button class="px-5 py-1 text-white text-md rounded-full focus:outline-none viewall-btn">View all</button>
+                                </div>
+                            </div>
+                            <table class="min-w-full">
+                                <thead>
+                                    <tr class="summary">
+                                        <th class="px-6 py-3 bg-gray-50 text-left text-xs md:text-sm leading-4 font-medium text-gray-500 tracking-wider">Project</th>
+                                        <th class="px-6 py-3 bg-gray-50 text-left text-xs md:text-sm leading-4 font-medium text-gray-500 tracking-wider">Description</th>
+                                        <th class="px-6 py-3 bg-gray-50 text-center text-xs md:text-sm leading-4 font-medium text-gray-500 tracking-wider">Location</th>
+                                        <th class="px-6 py-3 bg-gray-50 text-center text-xs md:text-sm leading-4 font-medium text-gray-500 tracking-wider">Network</th>
+                                        <th class="px-6 py-3 bg-gray-50 text-center text-xs md:text-sm leading-4 font-medium text-gray-500 tracking-wider">Status</th>
+                                        <th class="px-6 py-3 bg-gray-50"></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="bg-white">
+                                    <tr>
+                                        <td class="px-6 py-2 whitespace-no-wrap">
+                                            <div class="flex items-center">
+                                                <div class="text-sm leading-5 text-gray-500">Project Name</div>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap">
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-sm leading-5 text-gray-900 w-5/6 ">Lorem ipsum dolor sit amet consectetur</span>
+                                                <a href="#" class="w-1/6 "><img src="assets/img/dash/edit.png" class="mx-auto" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap">
+                                            <img class="mx-auto" src="assets/img/dash/canada.png" alt="">
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                                            <div class="text-sm leading-5 text-gray-500 text-center">10.0.2.1</div>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap text-center text-sm leading-5 font-medium">
+                                            <span class="px-2 inline-flex text-xs items-center leading-5 rounded-full font-semibold status running">
+                                                <i class="fas fa-circle text-xs mr-1" style="font-size: 8px;"></i> Running
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap text-right text-3xl leading-5 font-medium">
+                                            <a class="px-2 inline-flex leading-5 font-semibold text-gray-600" href="#">
+                                                <i class="fal fa-ellipsis-h"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-2 whitespace-no-wrap">
+                                            <div class="flex items-center">
+                                                <div class="text-sm leading-5 text-gray-500">Project Name</div>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap">
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-sm leading-5 text-gray-900 w-5/6 ">Lorem ipsum dolor sit amet consectetur</span>
+                                                <a href="#" class="w-1/6 "><img src="assets/img/dash/edit.png" class="mx-auto" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap">
+                                            <img class="mx-auto" src="assets/img/dash/canada.png" alt="">
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                                            <div class="text-sm leading-5 text-gray-500 text-center">10.0.2.1</div>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap text-center text-sm leading-5 font-medium">
+                                            <span class="px-2 inline-flex text-xs items-center leading-5 rounded-full font-semibold status running">
+                                                <i class="fas fa-circle text-xs mr-1" style="font-size: 8px;"></i> Running
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap text-right text-3xl leading-5 font-medium">
+                                            <a class="px-2 inline-flex leading-5 font-semibold text-gray-600" href="#">
+                                                <i class="fal fa-ellipsis-h"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-2 whitespace-no-wrap">
+                                            <div class="flex items-center">
+                                                <div class="text-sm leading-5 text-gray-500">Project Name</div>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap">
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-sm leading-5 text-gray-900 w-5/6 ">Lorem ipsum dolor sit amet consectetur</span>
+                                                <a href="#" class="w-1/6 "><img src="assets/img/dash/edit.png" class="mx-auto" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap">
+                                            <img class="mx-auto" src="assets/img/dash/canada.png" alt="">
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                                            <div class="text-sm leading-5 text-gray-500 text-center">10.0.2.1</div>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap text-center text-sm leading-5 font-medium">
+                                            <span class="px-2 inline-flex text-xs items-center leading-5 rounded-full font-semibold status running">
+                                                <i class="fas fa-circle text-xs mr-1" style="font-size: 8px;"></i> Running
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap text-right text-3xl leading-5 font-medium">
+                                            <a class="px-2 inline-flex leading-5 font-semibold text-gray-600" href="#">
+                                                <i class="fal fa-ellipsis-h"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-2 whitespace-no-wrap">
+                                            <div class="flex items-center">
+                                                <div class="text-sm leading-5 text-gray-500">Project Name</div>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap">
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-sm leading-5 text-gray-900 w-5/6 ">Lorem ipsum dolor sit amet consectetur</span>
+                                                <a href="#" class="w-1/6 "><img src="assets/img/dash/edit.png" class="mx-auto" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap">
+                                            <img class="mx-auto" src="assets/img/dash/canada.png" alt="">
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                                            <div class="text-sm leading-5 text-gray-500 text-center">10.0.2.1</div>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap text-center text-sm leading-5 font-medium">
+                                            <span class="px-2 inline-flex text-xs items-center leading-5 rounded-full font-semibold status running">
+                                                <i class="fas fa-circle text-xs mr-1" style="font-size: 8px;"></i> Running
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-2 whitespace-no-wrap text-right text-3xl leading-5 font-medium">
+                                            <a class="px-2 inline-flex leading-5 font-semibold text-gray-600" href="#">
+                                                <i class="fal fa-ellipsis-h"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Summary table ends -->
+                    
+                    <!-- Lower starts -->
+                    <div class="dash-lower mx-4 md:mx-0">
+                        <!-- Active User starts -->
+                        <div class="active-user table-shadow sm:rounded-lg bg-white py-3 px-4">
+                            <!-- header starts-->
+                            <div class="flex justify-between items-center mb-5">
+                                <h4 class="text-gray-500">Active Users</h2>
+                                <a class="text-2xl font-semibold text-gray-600" href="#">
+                                    <i class="fal fa-ellipsis-h"></i>
+                                </a>
+                            </div>
+                            <!-- header ends-->
+
+                            <!-- user isotope starts -->
+                            <div class="flex items-center mb-8">
+                                <img src="assets/img/dash/avatar.png" class="mr-4">
+                                <p class="text-sm text-gray-500">John Doe</p>
+                            </div>
+                            <!-- user isotope ends -->
+
+                            <!-- user isotope starts -->
+                            <div class="flex items-center mb-8">
+                                <img src="assets/img/dash/avatar.png" class="mr-4">
+                                <p class="text-sm text-gray-500">John Doe</p>
+                            </div>
+                            <!-- user isotope ends -->
+
+                            <!-- user isotope starts -->
+                            <div class="flex items-center mb-5">
+                                <img src="assets/img/dash/avatar.png" class="mr-4">
+                                <p class="text-sm text-gray-500">John Doe</p>
+                            </div>
+                            <!-- user isotope ends -->
+
+                        </div>
+                        <!-- Active User ends -->
+
+                        <!-- Storage starts -->
+                        <div class="storage table-shadow sm:rounded-lg bg-white py-5 px-3">
+                            <!-- header starts-->
+                            <div class="flex justify-between items-center mb-5">
+                                <h4 class="text-gray-500 flex items-center">
+                                    <img src="assets/img/dash/storage.png" class="storage-ico mr-6"> Storage
+                                </h4>
+                                <a class="text-2xl font-semibold text-gray-600" href="#">
+                                    <i class="fal fa-ellipsis-h"></i>
+                                </a>
+                            </div>
+                            <p class="text-gray-400 mb-4">235.4 GB</p>
+                            <div class="bar bg-gray-200 rounded-full">
+                                <div class="blueBar h-full rounded-full" style="width:40%"></div>
+                            </div>
+                        </div>
+                        <!-- Storage ends -->
+
+                        <!-- Third-party starts -->
+                        <div class="third-party table-shadow sm:rounded-lg bg-white py-5 px-3">
+                            Thirdparty
+                        </div>
+                        <!-- Third-party ends -->
+                    </div>
+                    <!-- Lower ends -->
+
+                </div>
+            </main>
+            <!-- Main Ends -->
+        </div>
+
+
+    </div>
+</body>
+</html>

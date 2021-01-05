@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentic Code</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" integrity="sha512-+WF6UMXHki/uCy0vATJzyA9EmAcohIQuwpNz0qEO+5UeE5ibPejMRdFuARSrl1trs3skqie0rY/gNiolfaef5w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-mono bg-gray-200">
+    <!-- Container -->
+    <div class="flex justify-center items-center md:flex-row flex-col bg-contain bg-no-repeat" style="background-image: url(assets/img/tf.png);">
+        <div class="w-full h-screen md:w-2/3 flex justify-center items-center">
+          <div class="flex flex-col w-10/12 md:w-6/12 bg-white shadow rounded-3xl py-5 px-10 form-box box-shadow">
+              <img src="assets/img/Lock.png" class="w-24 mx-auto my-5" alt="" srcset="">
+              <h2 class="font-semibold text-3xl mb-5 text-center">Two Factor Authentication</h2>
+              <p class="text-md font-semibold mb-6 text-center text-gray-500">Enter 6-digit authentication code </p>
+                <form action="" class="grid-container  pb-10">
+                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="number" name="number[]" max="1" class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-2xl mb-3 h-16 text-center">
+                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="number" name="number[]" max="1" class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-2xl mb-3 h-16 text-center">
+                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="number" name="number[]" max="1" class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-2xl mb-3 h-16 text-center">
+                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="number" name="number[]" max="1" class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-2xl mb-3 h-16 text-center">
+                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="number" name="number[]" max="1" class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-2xl mb-3 h-16 text-center">
+                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="number" name="number[]" max="1" class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-2xl mb-3 h-16 text-center">
+                </form>
+                <p class="text-xs font-medium mt-auto text-center mb-3 justify-self-end">Did not receive the code? <a href="#" class="font-semibold">Resend Code</a></p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Account Department Information</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-mono bg-white">
+    <!-- Container -->
+    <div class="flex  items-center md:flex-row flex-col">
+        <div class="w-full h-screen md:w-1/2 py-16 md:py-16 2xl:py-28 flex justify-center items-center">
+            <div class="w-10/12 md:w-6/12 form-box h-full flex flex-col">
+              <div class="mb-20 md:mb-12">
+                <h2 class="font-semibold text-4xl mb-3 text-gray-800">Create Account</h2>
+                <p class="text-md font-medium text-gray-400">Already have an account? <a href="#" class="font-semibold">Log In</a></p>
+              </div>
+              <form action="" class="flex flex-col h-full">
+                    <p class="text-md font-semibold mb-3 text-gray-800">Account Department Information</p>
+                    <div class="relative text-gray-600 focus-within:text-gray-400 form-field">
+                      <input type="text" id="firstname" name="firstname" placeholder="First Name *" class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-md mb-3">
+                      <input type="text" id="lastname" name="lastname" placeholder="Last Name *" class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-md mb-3">
+                    </div>
+
+                    <div class="relative text-gray-600 focus-within:text-gray-400">
+                      <input type="email" id="email" name="email" placeholder="E-mail *" class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-md mb-3">
+                    </div>
+
+                    <div class="relative text-gray-600 focus-within:text-gray-400">
+                      <input type="text" id="phone" name="phone" placeholder="Phone *" class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-md mb-3">
+                    </div>
+
+                    <div class="relative text-gray-600 focus-within:text-gray-400">
+                      <select class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-md mb-3 text-gray-300 rad">
+                        <option selected disable>How did you hear about us? *</option>
+                        <option>No</option>
+                        <option>Maybe</option>
+                      </select>
+                    </div>
+
+                    <div class="relative text-gray-600 focus-within:text-gray-400">
+                      <select class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-md mb-3 text-gray-300 rad">
+                        <option selected disable>Preferred Language *</option>
+                        <option>No</option>
+                        <option>Maybe</option>
+                      </select>
+                    </div>
+
+                    <label class="flex items-center">
+                        <p class="ml-auto text-3xl"><a href="" class="text-gray-300"><i class="fas fa-arrow-circle-right"></i></a></p>
+                    </label>
+
+                    <div class="w-full flex justify-center items-center mt-auto">
+                        <div class="text-md mr-4 text-gray-200"><i class="fas fa-circle"></i></div>
+                        <div class="text-xl text-blue "><i class="fas fa-circle"></i></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="w-full h-screen md:w-1/2 bg-image">
+        </div>
+    </div>
+</body>
+</html>
