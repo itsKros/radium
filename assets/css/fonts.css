@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'ProximaNova-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/ProximaNovaRegular.ttf'); /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/ProximaNovaRegular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'ProximaNova-Medium';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/ProximaNovaSemibold.ttf'); /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/ProximaNovaSemibold.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/ProximaNovaBold.ttf'); /* IE9 Compat Modes */
+    src: local(''),
+            url('../fonts/ProximaNovaBold.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+html, body, div, h1, h2, h3, h4, h5, h6, p, a,  ul, li {
+    font-family: 'ProximaNova-Regular', sans-serif !important;
+}
+
+.pn, .pn *{font-family: 'ProximaNova-Regular', sans-serif !important;}
+.pn-m, .pn-m *{font-family: 'ProximaNova-Medium', sans-serif !important;}
+.pn-b, .pn-b *{font-family: 'ProximaNova-Bold', sans-serif !important;}
+
