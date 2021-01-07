@@ -54,18 +54,67 @@ tr.summary th:last-child  { border-top-right-radius: 60px; border-bottom-right-r
 }
 
 .g-scrolling-carousel .items{
-  padding: 5px 10px;
+  
 
 }
-.g-scrolling-carousel .items div{
-  display: inline-block; /* notice the comments between inline-block items */
-
-  margin-right: 10px;
-  
-  line-height: 150px;
-  box-shadow: 0 0 5px #000;
-  text-align: center;
+.g-scrolling-carousel .items > div {
+  display: inline-block;
+  margin-right: 20px;
+  width: 175px;
+  height: 85px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 0px rgb(0 0 0 / 0.09);
 }
-.g-scrolling-carousel .items > div:first-child{
-  
+
+
+
+
+
+.box-check {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.box-check label {
+  background: #fff;
+  border-width: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin: 0;
+}
+.box-check input[type="radio"]{visibility:hidden;}
+.box-check input[type="radio"]:checked+label{background-color:rgba(9, 114, 226, 0.2);border-color:#0972E2}
+.box-check input[type="radio"]:checked+label:after {content: "";position: absolute;background: url(../img/dash/check.png) no-repeat;width: 26px;height: 26px;background-size: 26px;top: -13px;right: -13px;}
+.box-check input[type="radio"]:disabled+label {background: #C4C4C4;}
+span.serv-name span.name {font-size: 13px;line-height: 14px;}
+span.serv-name span.desc {font-size: 11px;}
+span.serv-name span.avail {font-size: 11px;position: absolute;bottom: 5px;}
+
+
+
+.project-step::before {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  border: 1px solid #979797;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.project-step.one::before{
+  content: "1";
+}
+.project-step .filter.active, .project-steps .filter:hover {
+  border-bottom: 2px solid #0972E2;
 }

@@ -41,28 +41,104 @@
             <!-- Main Start -->
             <main class="flex-1 overflow-x-hidden overflow-y-auto bg-dash-main">
                 <div class="container mx-auto px-2 md:px-6 py-8">
-                    <h3 class="text-gray-700 text-3xl font-medium mx-4 md:m-0">Add New Project</h3>
+                    <h3 class="text-gray-900 text-3xl font-medium border-b border-gray-300 pb-3 mb-5">Add New Project</h3>
+                    
+                    <!-- Project Step 1 Choose Server Location Starts -->
+                    <div class="project-step one relative pl-12">
+                        <h4 class="step-title text-gray-700 text-2xl font-medium mb-5">Choose Server Location</h4>
+                        <div class="filterBtn flex mb-4"> 
+                            <a class="cursor-pointer text-gray-900 mr-4 filter active" data-filter="all">All Locations</a>
+                            <a class="cursor-pointer text-gray-900 mr-4 filter" data-filter=".america">America</a>
+                            <a class="cursor-pointer text-gray-900 mr-4 filter" data-filter=".europe">Europe</a>
+                            <a class="cursor-pointer text-gray-900 mr-4 filter" data-filter=".australia">Australia</a>
+                            <a class="cursor-pointer text-gray-900 mr-4 filter" data-filter=".asia">Asia</a>
+                        </div>
+                        <div class="g-scrolling-carousel">
+                            <div id="serverLocation" class="items pt-5">
+                                <div class="mix america">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-loc-1" name="servLoc" checked="checked"> 
+                                        <label for="serv-loc-1" class="flex items-center">
+                                            <img src="assets/img/dash/can_34.png" class="mr-2">
+                                            <span class="serv-name flex flex-col">
+                                                <span class="name text-sm">Toronto</span> 
+                                                <span class="desc text-xs">Canada</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="mix america">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-loc-2" name="servLoc" disabled> 
+                                        <label for="serv-loc-2" class="flex items-center">
+                                            <img src="assets/img/dash/can_34.png" class="mr-2">
+                                            <span class="serv-name flex flex-col">
+                                                <span class="name text-sm">Montreal</span> 
+                                                <span class="desc text-xs">Canada</span>
+                                                <span class="avail text-white">Available Soon</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
 
-                    <div class="filterBtn flex"> 
-                       <a class="mr-4 filter active" data-filter="all">All Locations</a>
-                       <a class="mr-4 filter" data-filter=".america">America</a>
-                       <a class="mr-4 filter" data-filter=".europe">Europe</a>
-                       <a class="mr-4 filter" data-filter=".australia">Australia</a>
-                       <a class="mr-4 filter" data-filter=".asia">Asia</a>
-                    </div>
+                                <div class="mix america">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-loc-3" name="servLoc"> 
+                                        <label for="serv-loc-3" class="flex items-center">
+                                            <img src="assets/img/dash/usa_34.png" class="mr-2">
+                                            <span class="serv-name flex flex-col">
+                                                <span class="name text-sm">New York</span> 
+                                                <span class="desc text-xs">USA</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
 
-                    <div class="g-scrolling-carousel">
-                        <div id="serverLocation" class="items">
-                            <div class="mix america">USA 1</div>
-                            <div class="mix america">USA 2</div>
-                            <div class="mix europe">EUR 1</div>
-                            <div class="mix europe">EUR 2</div>
-                            <div class="mix australia">AUS 1</div>
-                            <div class="mix australia">AUS 2</div>
-                            <div class="mix asia">ASIA 1</div>
-                            <div class="mix asia">ASIA 2</div>
+                                <div class="mix europe">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-loc-4" name="servLoc"> 
+                                        <label for="serv-loc-4" class="flex items-center">
+                                            <img src="assets/img/dash/lon_34.png" class="mr-2">
+                                            <span class="serv-name flex flex-col">
+                                                <span class="name text-sm">London</span> 
+                                                <span class="desc text-xs">United Kingdom</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="mix asia">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-loc-5" name="servLoc"> 
+                                        <label for="serv-loc-5" class="flex items-center">
+                                            <img src="assets/img/dash/sin_34.png" class="mr-2">
+                                            <span class="serv-name flex flex-col">
+                                                <span class="name text-sm">Singapore</span> 
+                                                <span class="desc text-xs">Singapore</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="mix australia">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-loc-6" name="servLoc"> 
+                                        <label for="serv-loc-6" class="flex items-center">
+                                            <img src="assets/img/dash/aus_34.png" class="mr-2">
+                                            <span class="serv-name flex flex-col">
+                                                <span class="name text-sm">Sydney</span> 
+                                                <span class="desc text-xs">Australia</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
                         </div>
                     </div>
+                   <!-- Project Step 1 Choose Server Location Ends -->
                     
                     <!-- Summary table starts -->
                     <div class="-my-2 mb-4 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
