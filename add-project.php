@@ -41,17 +41,17 @@
             <!-- Main Start -->
             <main class="flex-1 overflow-x-hidden overflow-y-auto bg-dash-main">
                 <div class="container mx-auto px-2 md:px-6 py-8">
-                    <h3 class="text-gray-900 text-3xl font-medium border-b border-gray-300 pb-3 mb-5">Add New Project</h3>
+                    <h3 class="text-gray-900 text-3xl font-medium border-b border-gray-300 pb-3 mb-5 pl-5 md:pl-0">Add New Project</h3>
                     
-                    <!-- Project Step 1 Choose Server Location Starts -->
-                    <div class="project-step one relative pl-12">
-                        <h4 class="step-title text-gray-700 text-2xl font-medium mb-5">Choose Server Location</h4>
+                    <!-- Project Step - Choose Server Location Starts -->
+                    <div id="servLoc" class="project-step one relative pl-5 md:pl-12 mb-16">
+                        <h4 class="step-title text-gray-700 text-2xl font-medium mb-5 ml-10 md:ml-0">Choose Server Location</h4>
                         <div class="filterBtn flex mb-4"> 
-                            <a class="cursor-pointer text-gray-900 mr-4 filter active" data-filter="all">All Locations</a>
-                            <a class="cursor-pointer text-gray-900 mr-4 filter" data-filter=".america">America</a>
-                            <a class="cursor-pointer text-gray-900 mr-4 filter" data-filter=".europe">Europe</a>
-                            <a class="cursor-pointer text-gray-900 mr-4 filter" data-filter=".australia">Australia</a>
-                            <a class="cursor-pointer text-gray-900 mr-4 filter" data-filter=".asia">Asia</a>
+                            <a class="cursor-pointer text-gray-900 mr-4 filter filter-1 active" data-filter="all">All Locations</a>
+                            <a class="cursor-pointer text-gray-900 mr-4 filter filter-1" data-filter=".america">America</a>
+                            <a class="cursor-pointer text-gray-900 mr-4 filter filter-1" data-filter=".europe">Europe</a>
+                            <a class="cursor-pointer text-gray-900 mr-4 filter filter-1" data-filter=".australia">Australia</a>
+                            <a class="cursor-pointer text-gray-900 mr-4 filter filter-1" data-filter=".asia">Asia</a>
                         </div>
                         <div class="g-scrolling-carousel">
                             <div id="serverLocation" class="items pt-5">
@@ -138,7 +138,97 @@
                             </div>
                         </div>
                     </div>
-                   <!-- Project Step 1 Choose Server Location Ends -->
+                    <!-- Project Step - Choose Server Location Ends -->
+
+                    <!-- Project Step - Server Type Starts -->
+                    <div id="servType" class="project-step one relative pl-5 md:pl-12 mb-16">
+                        <h4 class="step-title text-gray-700 text-2xl font-medium mb-5 ml-10 md:ml-0">Server Type</h4>
+                        <div class="filterBtn flex mb-4"> 
+                            <a class="cursor-pointer text-gray-900 mr-4 filter filter-2 active" data-filter="all">All</a>
+                            <a class="cursor-pointer text-gray-900 mr-4 filter filter-2" data-filter=".application">Application</a>
+                            <a class="cursor-pointer text-gray-900 mr-4 filter filter-2" data-filter=".backup">Backup</a>
+                            <a class="cursor-pointer text-gray-900 mr-4 filter filter-2" data-filter=".snapshot">Snapshot</a>
+                        </div>
+                        <div class="g-scrolling-carousel">
+                            <div id="serverType" class="items pt-5">
+                                <div class="mix application">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-typ-1" name="servTyp" checked="checked"> 
+                                        <label for="serv-typ-1" class="flex items-center">
+                                            <img src="assets/img/dash/servPlace.png" class="mr-2">
+                                            <span class="serv-name flex flex-col">
+                                                <span class="name text-sm">Server Type</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="mix application">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-typ-2" name="servTyp"> 
+                                        <label for="serv-typ-2" class="flex items-center">
+                                            <img src="assets/img/dash/servPlace.png" class="mr-2">
+                                            <span class="serv-name flex flex-col">
+                                                <span class="name text-sm">Server Type</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="mix backup">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-typ-3" name="servTyp" checked="checked"> 
+                                        <label for="serv-typ-3" class="flex items-center">
+                                            <img src="assets/img/dash/servPlace.png" class="mr-2">
+                                            <span class="serv-name flex flex-col">
+                                                <span class="name text-sm">Server Type</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="mix backup">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-typ-4" name="servTyp"> 
+                                        <label for="serv-typ-4" class="flex items-center">
+                                            <img src="assets/img/dash/servPlace.png" class="mr-2">
+                                            <span class="serv-name flex flex-col">
+                                                <span class="name text-sm">Server Type</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="mix snapshot">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-typ-5" name="servTyp" checked="checked"> 
+                                        <label for="serv-typ-5" class="flex items-center">
+                                            <img src="assets/img/dash/servPlace.png" class="mr-2">
+                                            <span class="serv-name flex flex-col">
+                                                <span class="name text-sm">Server Type</span>
+                                            </span>    
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="mix snapshot ">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-typ-6" name="servTyp"> 
+                                        <label for="serv-typ-6" class="flex items-center">
+                                            <img src="assets/img/dash/servPlace.png" class="mr-2">
+                                            <span class="serv-name flex flex-col">
+                                                <span class="name text-sm">Server Type</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Step - Server Type Ends -->
+
+                    
                     
                     <!-- Summary table starts -->
                     <div class="-my-2 mb-4 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">

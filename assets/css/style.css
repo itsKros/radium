@@ -1,4 +1,4 @@
-body {background: #6E8693;font-family: Arial, sans-serif;}
+body {background: #6E8693;font-family: Arial, sans-serif;counter-reset: project-step-counter;}
 body, h1, h2, h3, h4, h5, h6, p, a, ul, li, form, label, input, button {font-family: Arial, sans-serif;}
 a {color:#0489F7;}
 input::placeholder {color: #CDCDCD;font-size: 14px;}
@@ -48,13 +48,12 @@ tr.summary th:last-child  { border-top-right-radius: 60px; border-bottom-right-r
 .blueBar {background-color: #0972E2;}
 
 
-/* Add New Project */
-#serverLocation .mix {
-  display: none;
-}
+
+#serverLocation .mix,
+#serverType .mix {display: none;}
 
 .g-scrolling-carousel .items{
-  
+  width: 98%;
 
 }
 .g-scrolling-carousel .items > div {
@@ -100,6 +99,8 @@ span.serv-name span.avail {font-size: 11px;position: absolute;bottom: 5px;}
 
 
 .project-step::before {
+  counter-increment: project-step-counter;
+  content: counter(project-step-counter);
   position: absolute;
   left: 0;
   width: 30px;
@@ -112,9 +113,34 @@ span.serv-name span.avail {font-size: 11px;position: absolute;bottom: 5px;}
   font-size: 18px;
 }
 
-.project-step.one::before{
-  content: "1";
-}
+
+
 .project-step .filter.active, .project-steps .filter:hover {
   border-bottom: 2px solid #0972E2;
+}
+
+.project-step .jc-right, 
+.project-step .jc-left {
+  width: 30px;
+  height: 30px;
+  margin-bottom: auto;
+  margin-top: auto;
+  box-shadow: none;
+  border: 1px solid #979797;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 13px;
+  bottom: 0;
+  z-index: 2;
+  opacity: 0.94;
+}
+
+.project-step .jc-left {
+  left: -38px;
+}
+
+@media only screen and (max-width:767px){
+  .project-step::before {left: 20px;}
 }
