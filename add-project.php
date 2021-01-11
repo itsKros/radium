@@ -39,7 +39,7 @@
             <!-- Header Ends -->
             
             <!-- Main Start -->
-            <main class="flex-1 overflow-x-hidden overflow-y-auto bg-dash-main">
+            <main id="projectStep" class="flex-1 overflow-x-hidden overflow-y-auto bg-dash-main">
                 <div class="container mx-auto px-2 md:px-6 py-8">
                     <h3 class="text-gray-900 text-3xl font-medium border-b border-gray-300 pb-3 mb-5 pl-5 md:pl-0">Add New Project</h3>
                     
@@ -58,7 +58,7 @@
                                 <div class="mix america">
                                     <div class="box-check">
                                         <input type="radio" id="serv-loc-1" name="servLoc" checked="checked"> 
-                                        <label for="serv-loc-1" class="flex items-center">
+                                        <label for="serv-loc-1" class="flex items-center select-none">
                                             <img src="assets/img/dash/can_34.png" class="mr-2">
                                             <span class="serv-name flex flex-col">
                                                 <span class="name text-sm">Toronto</span> 
@@ -71,7 +71,7 @@
                                 <div class="mix america">
                                     <div class="box-check">
                                         <input type="radio" id="serv-loc-2" name="servLoc" disabled> 
-                                        <label for="serv-loc-2" class="flex items-center">
+                                        <label for="serv-loc-2" class="flex items-center select-none">
                                             <img src="assets/img/dash/can_34.png" class="mr-2">
                                             <span class="serv-name flex flex-col">
                                                 <span class="name text-sm">Montreal</span> 
@@ -85,7 +85,7 @@
                                 <div class="mix america">
                                     <div class="box-check">
                                         <input type="radio" id="serv-loc-3" name="servLoc"> 
-                                        <label for="serv-loc-3" class="flex items-center">
+                                        <label for="serv-loc-3" class="flex items-center select-none">
                                             <img src="assets/img/dash/usa_34.png" class="mr-2">
                                             <span class="serv-name flex flex-col">
                                                 <span class="name text-sm">New York</span> 
@@ -98,7 +98,7 @@
                                 <div class="mix europe">
                                     <div class="box-check">
                                         <input type="radio" id="serv-loc-4" name="servLoc"> 
-                                        <label for="serv-loc-4" class="flex items-center">
+                                        <label for="serv-loc-4" class="flex items-center select-none">
                                             <img src="assets/img/dash/lon_34.png" class="mr-2">
                                             <span class="serv-name flex flex-col">
                                                 <span class="name text-sm">London</span> 
@@ -111,7 +111,7 @@
                                 <div class="mix asia">
                                     <div class="box-check">
                                         <input type="radio" id="serv-loc-5" name="servLoc"> 
-                                        <label for="serv-loc-5" class="flex items-center">
+                                        <label for="serv-loc-5" class="flex items-center select-none">
                                             <img src="assets/img/dash/sin_34.png" class="mr-2">
                                             <span class="serv-name flex flex-col">
                                                 <span class="name text-sm">Singapore</span> 
@@ -124,7 +124,7 @@
                                 <div class="mix australia">
                                     <div class="box-check">
                                         <input type="radio" id="serv-loc-6" name="servLoc"> 
-                                        <label for="serv-loc-6" class="flex items-center">
+                                        <label for="serv-loc-6" class="flex items-center select-none">
                                             <img src="assets/img/dash/aus_34.png" class="mr-2">
                                             <span class="serv-name flex flex-col">
                                                 <span class="name text-sm">Sydney</span> 
@@ -154,7 +154,7 @@
                                 <div class="mix application">
                                     <div class="box-check">
                                         <input type="radio" id="serv-typ-1" name="servTyp" checked="checked"> 
-                                        <label for="serv-typ-1" class="flex items-center">
+                                        <label for="serv-typ-1" class="flex items-center select-none">
                                             <img src="assets/img/dash/servPlace.png" class="mr-2">
                                             <span class="serv-name flex flex-col">
                                                 <span class="name text-sm">Server Type</span>
@@ -166,7 +166,7 @@
                                 <div class="mix application">
                                     <div class="box-check">
                                         <input type="radio" id="serv-typ-2" name="servTyp"> 
-                                        <label for="serv-typ-2" class="flex items-center">
+                                        <label for="serv-typ-2" class="flex items-center select-none">
                                             <img src="assets/img/dash/servPlace.png" class="mr-2">
                                             <span class="serv-name flex flex-col">
                                                 <span class="name text-sm">Server Type</span>
@@ -177,8 +177,8 @@
 
                                 <div class="mix backup">
                                     <div class="box-check">
-                                        <input type="radio" id="serv-typ-3" name="servTyp" checked="checked"> 
-                                        <label for="serv-typ-3" class="flex items-center">
+                                        <input type="radio" id="serv-typ-3" name="servTyp"> 
+                                        <label for="serv-typ-3" class="flex items-center select-none">
                                             <img src="assets/img/dash/servPlace.png" class="mr-2">
                                             <span class="serv-name flex flex-col">
                                                 <span class="name text-sm">Server Type</span>
@@ -190,7 +190,7 @@
                                 <div class="mix backup">
                                     <div class="box-check">
                                         <input type="radio" id="serv-typ-4" name="servTyp"> 
-                                        <label for="serv-typ-4" class="flex items-center">
+                                        <label for="serv-typ-4" class="flex items-center select-none">
                                             <img src="assets/img/dash/servPlace.png" class="mr-2">
                                             <span class="serv-name flex flex-col">
                                                 <span class="name text-sm">Server Type</span>
@@ -201,8 +201,8 @@
 
                                 <div class="mix snapshot">
                                     <div class="box-check">
-                                        <input type="radio" id="serv-typ-5" name="servTyp" checked="checked"> 
-                                        <label for="serv-typ-5" class="flex items-center">
+                                        <input type="radio" id="serv-typ-5" name="servTyp"> 
+                                        <label for="serv-typ-5" class="flex items-center select-none">
                                             <img src="assets/img/dash/servPlace.png" class="mr-2">
                                             <span class="serv-name flex flex-col">
                                                 <span class="name text-sm">Server Type</span>
@@ -214,7 +214,7 @@
                                 <div class="mix snapshot ">
                                     <div class="box-check">
                                         <input type="radio" id="serv-typ-6" name="servTyp"> 
-                                        <label for="serv-typ-6" class="flex items-center">
+                                        <label for="serv-typ-6" class="flex items-center select-none">
                                             <img src="assets/img/dash/servPlace.png" class="mr-2">
                                             <span class="serv-name flex flex-col">
                                                 <span class="name text-sm">Server Type</span>
@@ -228,224 +228,231 @@
                     </div>
                     <!-- Project Step - Server Type Ends -->
 
-                    
-                    
-                    <!-- Summary table starts -->
-                    <div class="-my-2 mb-4 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-                        <div class="align-middle inline-block min-w-full table-shadow overflow-hidden sm:rounded-lg bg-white p-5 mt-8 mb-4 md:my-8 mx-4 md:mx-0 ">
-                            <div class="flex justify-between items-center mb-4 px-6">
-                                <div class="text-md leading-5 text-gray-500">Summary</div>
-                                <div class="flex items-center">
-                                    <img src="assets/img/dash/filter.png" class="mr-3">
-                                    <button class="px-5 py-1 text-white text-md rounded-full focus:outline-none viewall-btn">View all</button>
+                    <!-- Project Step - Server Size Starts -->
+                    <div id="servSize" class="project-step one relative pl-5 md:pl-12 mb-16">
+                        <h4 class="step-title text-gray-700 text-2xl font-medium mb-5 ml-10 md:ml-0">Server Size</h4>
+                        <div class="g-scrolling-carousel">
+                            <div id="serverSize" class="items pt-5">
+                                
+                                <div class="mix">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-size-1" name="servSize" checked="checked"> 
+                                        <label for="serv-size-1" class="flex flex-col items-center select-none">
+                                            <span class="flex flex-col">
+                                                <span class="size text-sm">64GB</span>
+                                                <span class="price text-sm">$6/mo</span>
+                                            </span>
+                                            <div class="seprator"></div>
+                                            <span class="serv-name flex flex-col mt-auto items-center">
+                                                <span class="cpu text-xs">1 CPU</span>
+                                                <span class="memory text-xs">1000 Memory</span>
+                                                <span class="bandwidth text-xs">1000 Bandwidth</span>
+                                            </span>
+                                        </label>
+                                    </div>
                                 </div>
+
+                                <div class="mix">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-size-2" name="servSize"> 
+                                        <label for="serv-size-2" class="flex flex-col items-center select-none">
+                                            <span class="flex flex-col">
+                                                <span class="size text-sm">64GB</span>
+                                                <span class="price text-sm">$6/mo</span>
+                                            </span>
+                                            <div class="seprator"></div>
+                                            <span class="serv-name flex flex-col mt-auto items-center">
+                                                <span class="cpu text-xs">1 CPU</span>
+                                                <span class="memory text-xs">1000 Memory</span>
+                                                <span class="bandwidth text-xs">1000 Bandwidth</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="mix">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-size-3" name="servSize"> 
+                                        <label for="serv-size-3" class="flex flex-col items-center select-none">
+                                            <span class="flex flex-col">
+                                                <span class="size text-sm">64GB</span>
+                                                <span class="price text-sm">$6/mo</span>
+                                            </span>
+                                            <div class="seprator"></div>
+                                            <span class="serv-name flex flex-col mt-auto items-center">
+                                                <span class="cpu text-xs">1 CPU</span>
+                                                <span class="memory text-xs">1000 Memory</span>
+                                                <span class="bandwidth text-xs">1000 Bandwidth</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="mix">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-size-4" name="servSize"> 
+                                        <label for="serv-size-4" class="flex flex-col items-center select-none">
+                                            <span class="flex flex-col">
+                                                <span class="size text-sm">64GB</span>
+                                                <span class="price text-sm">$6/mo</span>
+                                            </span>
+                                            <div class="seprator"></div>
+                                            <span class="serv-name flex flex-col mt-auto items-center">
+                                                <span class="cpu text-xs">1 CPU</span>
+                                                <span class="memory text-xs">1000 Memory</span>
+                                                <span class="bandwidth text-xs">1000 Bandwidth</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="mix">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-size-5" name="servSize"> 
+                                        <label for="serv-size-5" class="flex flex-col items-center select-none">
+                                            <span class="flex flex-col">
+                                                <span class="size text-sm">64GB</span>
+                                                <span class="price text-sm">$6/mo</span>
+                                            </span>
+                                            <div class="seprator"></div>
+                                            <span class="serv-name flex flex-col mt-auto items-center">
+                                                <span class="cpu text-xs">1 CPU</span>
+                                                <span class="memory text-xs">1000 Memory</span>
+                                                <span class="bandwidth text-xs">1000 Bandwidth</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="mix">
+                                    <div class="box-check">
+                                        <input type="radio" id="serv-size-6" name="servSize"> 
+                                        <label for="serv-size-6" class="flex flex-col items-center select-none">
+                                            <span class="flex flex-col">
+                                                <span class="size text-sm">64GB</span>
+                                                <span class="price text-sm">$6/mo</span>
+                                            </span>
+                                            <div class="seprator"></div>
+                                            <span class="serv-name flex flex-col mt-auto items-center">
+                                                <span class="cpu text-xs">1 CPU</span>
+                                                <span class="memory text-xs">1000 Memory</span>
+                                                <span class="bandwidth text-xs">1000 Bandwidth</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
                             </div>
-                            <table class="min-w-full">
-                                <thead>
-                                    <tr class="summary">
-                                        <th class="px-6 py-3 bg-gray-50 text-left text-xs md:text-sm leading-4 font-medium text-gray-500 tracking-wider">Project</th>
-                                        <th class="px-6 py-3 bg-gray-50 text-left text-xs md:text-sm leading-4 font-medium text-gray-500 tracking-wider">Description</th>
-                                        <th class="px-6 py-3 bg-gray-50 text-center text-xs md:text-sm leading-4 font-medium text-gray-500 tracking-wider">Location</th>
-                                        <th class="px-6 py-3 bg-gray-50 text-center text-xs md:text-sm leading-4 font-medium text-gray-500 tracking-wider">Network</th>
-                                        <th class="px-6 py-3 bg-gray-50 text-center text-xs md:text-sm leading-4 font-medium text-gray-500 tracking-wider">Status</th>
-                                        <th class="px-6 py-3 bg-gray-50"></th>
-                                    </tr>
-                                </thead>
-
-                                <tbody class="bg-white">
-                                    <tr>
-                                        <td class="px-6 py-2 whitespace-no-wrap">
-                                            <div class="flex items-center">
-                                                <div class="text-sm leading-5 text-gray-500">Project Name</div>
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap">
-                                            <div class="flex justify-between items-center">
-                                                <span class="text-sm leading-5 text-gray-900 w-5/6 ">Lorem ipsum dolor sit amet consectetur</span>
-                                                <a href="#" class="w-1/6 "><img src="assets/img/dash/edit.png" class="mx-auto" alt=""></a>
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap">
-                                            <img class="mx-auto" src="assets/img/dash/canada.png" alt="">
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                                            <div class="text-sm leading-5 text-gray-500 text-center">10.0.2.1</div>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap text-center text-sm leading-5 font-medium">
-                                            <span class="px-2 inline-flex text-xs items-center leading-5 rounded-full font-semibold status running">
-                                                <i class="fas fa-circle text-xs mr-1" style="font-size: 8px;"></i> Running
-                                            </span>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap text-right text-3xl leading-5 font-medium">
-                                            <a class="px-2 inline-flex leading-5 font-semibold text-gray-600" href="#">
-                                                <i class="fal fa-ellipsis-h"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="px-6 py-2 whitespace-no-wrap">
-                                            <div class="flex items-center">
-                                                <div class="text-sm leading-5 text-gray-500">Project Name</div>
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap">
-                                            <div class="flex justify-between items-center">
-                                                <span class="text-sm leading-5 text-gray-900 w-5/6 ">Lorem ipsum dolor sit amet consectetur</span>
-                                                <a href="#" class="w-1/6 "><img src="assets/img/dash/edit.png" class="mx-auto" alt=""></a>
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap">
-                                            <img class="mx-auto" src="assets/img/dash/canada.png" alt="">
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                                            <div class="text-sm leading-5 text-gray-500 text-center">10.0.2.1</div>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap text-center text-sm leading-5 font-medium">
-                                            <span class="px-2 inline-flex text-xs items-center leading-5 rounded-full font-semibold status running">
-                                                <i class="fas fa-circle text-xs mr-1" style="font-size: 8px;"></i> Running
-                                            </span>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap text-right text-3xl leading-5 font-medium">
-                                            <a class="px-2 inline-flex leading-5 font-semibold text-gray-600" href="#">
-                                                <i class="fal fa-ellipsis-h"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="px-6 py-2 whitespace-no-wrap">
-                                            <div class="flex items-center">
-                                                <div class="text-sm leading-5 text-gray-500">Project Name</div>
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap">
-                                            <div class="flex justify-between items-center">
-                                                <span class="text-sm leading-5 text-gray-900 w-5/6 ">Lorem ipsum dolor sit amet consectetur</span>
-                                                <a href="#" class="w-1/6 "><img src="assets/img/dash/edit.png" class="mx-auto" alt=""></a>
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap">
-                                            <img class="mx-auto" src="assets/img/dash/canada.png" alt="">
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                                            <div class="text-sm leading-5 text-gray-500 text-center">10.0.2.1</div>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap text-center text-sm leading-5 font-medium">
-                                            <span class="px-2 inline-flex text-xs items-center leading-5 rounded-full font-semibold status running">
-                                                <i class="fas fa-circle text-xs mr-1" style="font-size: 8px;"></i> Running
-                                            </span>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap text-right text-3xl leading-5 font-medium">
-                                            <a class="px-2 inline-flex leading-5 font-semibold text-gray-600" href="#">
-                                                <i class="fal fa-ellipsis-h"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="px-6 py-2 whitespace-no-wrap">
-                                            <div class="flex items-center">
-                                                <div class="text-sm leading-5 text-gray-500">Project Name</div>
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap">
-                                            <div class="flex justify-between items-center">
-                                                <span class="text-sm leading-5 text-gray-900 w-5/6 ">Lorem ipsum dolor sit amet consectetur</span>
-                                                <a href="#" class="w-1/6 "><img src="assets/img/dash/edit.png" class="mx-auto" alt=""></a>
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap">
-                                            <img class="mx-auto" src="assets/img/dash/canada.png" alt="">
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                                            <div class="text-sm leading-5 text-gray-500 text-center">10.0.2.1</div>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap text-center text-sm leading-5 font-medium">
-                                            <span class="px-2 inline-flex text-xs items-center leading-5 rounded-full font-semibold status running">
-                                                <i class="fas fa-circle text-xs mr-1" style="font-size: 8px;"></i> Running
-                                            </span>
-                                        </td>
-                                        <td class="px-6 py-2 whitespace-no-wrap text-right text-3xl leading-5 font-medium">
-                                            <a class="px-2 inline-flex leading-5 font-semibold text-gray-600" href="#">
-                                                <i class="fal fa-ellipsis-h"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-
-                                    
-                                </tbody>
-                            </table>
                         </div>
                     </div>
-                    <!-- Summary table ends -->
+                    <!-- Project Step - Server Size Ends -->
+
+                    <!-- Project Step - Server Name Starts -->
+                    <div id="servName" class="project-step one relative pl-5 md:pl-12 mb-16 pr-5 md:pr-0">
+                        <h4 class="step-title text-gray-700 text-2xl font-medium mb-5 ml-10 md:ml-0">Server Name</h4>
+                        <div id="serverName" class="items pt-5">
+                        <div class="servname">
+                            <div class="pname">
+                                <input type="text" id="pname" name="pname" placeholder="Project Name" class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-md">
+                            </div>
+                            <div class="pnetwork">
+                                <input type="text" id="pnetwork" name="pnetwork" placeholder="Project Network" class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-md">
+                            </div>
+                            <div class="pdesc">
+                                <textarea id="pdesc" name="pdesc" placeholder="Project Description" class="px-2 border py-2 w-full focus:outline-none font-bold border-gray-500 rounded-md h-full"></textarea>
+                            </div>
+                        </div>
+                                
+
+                        </div>
+                    </div>
+                    <!-- Project Step - Server Name Ends -->
+
+                    <!-- Project Step - Additional Features Starts -->
+                    <div id="addFeat" class="project-step one relative pl-5 md:pl-12 mb-3">
+                        <h4 class="step-title text-gray-700 text-2xl font-medium mb-5 ml-10 md:ml-0">Additional Features</h4>
+                        <div class="g-scrolling-carousel">
+                            <div id="additonalFeature" class="items pt-5">
+                                
+                                <div class="mix">
+                                    <div class="box-check">
+                                        <input type="checkbox" id="feature-1" name="feature-1" > 
+                                        <label for="feature-1" class="flex flex-col items-center justify-center select-none">
+                                            <span class="flex flex-col items-center justify-center">
+                                                Feature
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="mix">
+                                    <div class="box-check">
+                                        <input type="checkbox" id="feature-2" name="feature-2" > 
+                                        <label for="feature-2" class="flex flex-col items-center justify-center select-none">
+                                            <span class="flex flex-col items-center justify-center">
+                                                Feature
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="mix">
+                                    <div class="box-check">
+                                        <input type="checkbox" id="feature-3" name="feature-3" > 
+                                        <label for="feature-3" class="flex flex-col items-center justify-center select-none">
+                                            <span class="flex flex-col items-center justify-center">
+                                                Feature
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="mix">
+                                    <div class="box-check">
+                                        <input type="checkbox" id="feature-4" name="feature-4" > 
+                                        <label for="feature-4" class="flex flex-col items-center justify-center select-none">
+                                            <span class="flex flex-col items-center justify-center">
+                                                Feature
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Step - Additional Features Ends -->
+
                     
-                    <!-- Lower starts -->
-                    <div class="dash-lower mx-4 md:mx-0">
-                        <!-- Active User starts -->
-                        <div class="active-user table-shadow sm:rounded-lg bg-white py-3 px-4">
-                            <!-- header starts-->
-                            <div class="flex justify-between items-center mb-5">
-                                <h4 class="text-gray-500">Active Users</h2>
-                                <a class="text-2xl font-semibold text-gray-600" href="#">
-                                    <i class="fal fa-ellipsis-h"></i>
-                                </a>
-                            </div>
-                            <!-- header ends-->
-
-                            <!-- user isotope starts -->
-                            <div class="flex items-center mb-8">
-                                <img src="assets/img/dash/avatar.png" class="mr-4">
-                                <p class="text-sm text-gray-500">John Doe</p>
-                            </div>
-                            <!-- user isotope ends -->
-
-                            <!-- user isotope starts -->
-                            <div class="flex items-center mb-8">
-                                <img src="assets/img/dash/avatar.png" class="mr-4">
-                                <p class="text-sm text-gray-500">John Doe</p>
-                            </div>
-                            <!-- user isotope ends -->
-
-                            <!-- user isotope starts -->
-                            <div class="flex items-center mb-5">
-                                <img src="assets/img/dash/avatar.png" class="mr-4">
-                                <p class="text-sm text-gray-500">John Doe</p>
-                            </div>
-                            <!-- user isotope ends -->
-
-                        </div>
-                        <!-- Active User ends -->
-
-                        <!-- Storage starts -->
-                        <div class="storage table-shadow sm:rounded-lg bg-white py-5 px-3">
-                            <!-- header starts-->
-                            <div class="flex justify-between items-center mb-5">
-                                <h4 class="text-gray-500 flex items-center">
-                                    <img src="assets/img/dash/storage.png" class="storage-ico mr-6"> Storage
-                                </h4>
-                                <a class="text-2xl font-semibold text-gray-600" href="#">
-                                    <i class="fal fa-ellipsis-h"></i>
-                                </a>
-                            </div>
-                            <p class="text-gray-400 mb-4">235.4 GB</p>
-                            <div class="bar bg-gray-200 rounded-full">
-                                <div class="blueBar h-full rounded-full" style="width:40%"></div>
-                            </div>
-                        </div>
-                        <!-- Storage ends -->
-
-                        <!-- Third-party starts -->
-                        <div class="third-party table-shadow sm:rounded-lg bg-white py-5 px-3">
-                            Thirdparty
-                        </div>
-                        <!-- Third-party ends -->
-                    </div>
-                    <!-- Lower ends -->
+                    
+                    
 
                 </div>
             </main>
             <!-- Main Ends -->
+
+
+            <!-- Footer Start -->
+            <footer class="billfooter flex justify-between items-center py-4 px-6 bg-white shadow">
+                <div class="serv-qty mb-2 md:mb-0">
+                    <p class="text-gray-500 mb-1">Server Qty.</p>
+                    <input type="number" value="1" min="1" max="100" step="1"/>
+                </div>
+                
+                
+                <div class="mb-2 md:mb-0">
+                    <p class="text-gray-500 mb-1">Summary</p>
+                    <p class="text-blue text-2xl">$12/mo</p>
+                </div>
+
+                <div class="mb-2 md:mb-0">
+                    <button class="px-5 py-2 text-white text-md rounded-full focus:outline-none deploynow-btn">Deploy Now</button>
+                </div>
+                
+            </footer>
+            <!-- Footer Ends -->
+
         </div>
     
         <?php include('footer.php'); ?> 
